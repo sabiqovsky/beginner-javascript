@@ -3,15 +3,15 @@ const hooray = document.querySelector('.hooray');
 const buyButtons = document.querySelectorAll('.buy');
 
 function handleClick() {
-    return alert('Hey Jude!');
+  return alert('Hey Jude!');
 }
 
 const hoorayFn = () => {
-    console.log('Hooray!');
-}
+  console.log('Hooray!');
+};
 
-butts.addEventListener('click', function name() {
-    console.log('It works...');
+butts.addEventListener('click', () => {
+  console.log('It works...');
 });
 
 hooray.addEventListener('click', hoorayFn);
@@ -24,7 +24,7 @@ hooray.addEventListener('click', hoorayFn);
 //     });
 // });
 
-// // Arrow Func 
+// // Arrow Func
 // buyButtons.forEach((buyButton) => {
 //     buyButton.addEventListener('click', () => {
 //         alert('Go Buy...');
@@ -32,36 +32,35 @@ hooray.addEventListener('click', hoorayFn);
 // })
 
 function handleBuyButtons(event) {
-    console.log('Buy item.');
-    console.log(event);
-    console.log(event.target);
-    console.log(event.currentTarget);
-    console.log(event.target === event.currentTarget);
+  console.log('Buy item.');
+  console.log(event);
+  console.log(event.target);
+  console.log(event.currentTarget);
+  console.log(event.target === event.currentTarget);
 }
 
-buyButtons.forEach(function(buyButton) {
-    buyButton.addEventListener('click', handleBuyButtons)
+buyButtons.forEach((buyButton) => {
+  buyButton.addEventListener('click', handleBuyButtons);
 });
 
-window.addEventListener('click', event => {
-        console.log(event);
-        console.log(event.target);
-        event.stopPropagation();
+window.addEventListener('click', (event) => {
+  console.log(event);
+  console.log(event.target);
+  event.stopPropagation();
 });
 
 const picEl = document.querySelector('.photo');
 
 picEl.addEventListener('mouseover', (e) => {
-    console.log(e.target);
-    picEl.classList.add('hovered');
-    picEl.src = 'https://picsum.photos/600'
+  console.log(e.target);
+  picEl.classList.add('hovered');
+  picEl.src = 'https://picsum.photos/600';
 });
 
 picEl.addEventListener('mouseleave', (e) => {
-    console.log(e);
-    picEl.classList.remove('hovered');
-    img = document.querySelector('img');
-    picEl.classList.remove('photo')
-    picEl.src = img.src;
+  console.log(e);
+  picEl.classList.remove('hovered');
+  const img = document.querySelector('img');
+  picEl.classList.remove('photo');
+  picEl.src = img.src;
 });
-

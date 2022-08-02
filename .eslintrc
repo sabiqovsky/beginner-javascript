@@ -1,7 +1,5 @@
 {
   "extends": [
-    "wesbos",
-	  "airbnb",
-	  "prettier"
+    "wesbos"
   ]
 }
